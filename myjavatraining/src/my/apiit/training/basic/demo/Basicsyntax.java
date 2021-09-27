@@ -11,7 +11,9 @@ public class Basicsyntax {
 		//place your code here...
 	}
 	
-	public int m2( int i ) {
+	public int m2( int i ) 
+	{
+		int n = 10; //local variables
 		return i  * 10;
 	}
 	
