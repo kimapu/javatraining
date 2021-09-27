@@ -1,0 +1,18 @@
+package my.apiit.training.basic.demo;
+
+public class Basicsyntax {
+
+	
+	//method
+		//signature
+		//format:
+			// modifier returnType methodName( input-params ) {}
+	public void m1() {
+		//place your code here...
+	}
+	
+	public int m2( int i ) {
+		return i  * 10;
+	}
+	
+}
