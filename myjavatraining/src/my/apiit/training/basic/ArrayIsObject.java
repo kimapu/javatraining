@@ -1,6 +1,6 @@
 package my.apiit.training.basic;
 
-public class ArrayObject {
+public class ArrayIsObject {
 
 	//[] indicates the array object in java
 	void m1() {
