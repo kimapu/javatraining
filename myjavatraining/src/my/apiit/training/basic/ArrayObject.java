@@ -1,9 +1,10 @@
-package my.apiit.training.basic.demo;
+package my.apiit.training.basic;
 
 public class ArrayObject {
 
 	//[] indicates the array object in java
 	void m1() {
+		
 		int[] arr = new int[100]; //arr object
 		//assign value
 		arr[0] = 10;

@@ -1,8 +1,6 @@
-package my.apiit.training.basic.demo;
+package my.apiit.training.basic;
 
 public class Basicsyntax {
-
-	
 	//method
 		//signature
 		//format:
