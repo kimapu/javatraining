@@ -4,7 +4,25 @@ public class Employee extends Object  //what is the parent class of the Employee
 {
 	//Encapsulation -> private modifier
 	private String name;
+	
+	//get/set methods for name
+	public String getName() {
+		return this.name;
+	}
+	
+	public void setName(String employeeName) {
+		this.name = employeeName;
+	}
+	
 	private double salary;
+	//get/set methods for salary
+	public double getSalary() {
+		return this.salary;
+	}
+	
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
 
 	/** 
 	 * Constructor is a method that creates/makes/instantiates/constructs an object instance whenever the new keyword 
