@@ -1,4 +1,4 @@
-package my.apiit.training.demo;
+package my.apiit.training.impl;
 
 public class Calculator {
 

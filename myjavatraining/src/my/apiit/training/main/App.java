@@ -1,7 +1,7 @@
 package my.apiit.training.main;
 
-import my.apiit.training.demo.Calculator;
-import my.apiit.training.demo.MyCalculator;
+import my.apiit.training.impl.Calculator;
+import my.apiit.training.impl.MyCalculator;
 
 public class App {
 	
