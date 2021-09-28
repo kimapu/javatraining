@@ -3,7 +3,7 @@ package my.apiit.training.basic;
 public class UseAbstractKeyword {
 
 	//abstraction (OOP)
-		//defining methods to be anstract methods...
+		//defining methods to be abstract methods...
 	//abstract keyword can be applied to the
 		//1) class
 		//2) method
