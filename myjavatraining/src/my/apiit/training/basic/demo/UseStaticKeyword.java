@@ -1,4 +1,4 @@
-package my.apiit.training.basic.statickeyword;
+package my.apiit.training.basic.demo;
 
 public class UseStaticKeyword {
 

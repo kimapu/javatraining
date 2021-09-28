@@ -1,4 +1,4 @@
-package my.apiit.training.basic.finalkeyword;
+package my.apiit.training.basic.demo;
 
 public class UseFinalKeyword {
 

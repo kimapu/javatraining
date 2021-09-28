@@ -1,4 +1,4 @@
-package my.apiit.training.basic.abstractkeyword;
+package my.apiit.training.basic.demo;
 
 public class UseAbstractKeyword {
 
