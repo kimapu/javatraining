@@ -14,7 +14,7 @@ public class App extends Object {
 	{
 		//tstMyCalculator();
 		//tstCalculator();
-		tstEmployee();
+		//tstEmployee();
 	}
 	
 	static void tstEmployee() {
