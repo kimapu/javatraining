@@ -8,7 +8,7 @@ public class DataType {
 		
 		DataType dt = new DataType();
 		//dt.m2();
-		dt.m3();
+		//dt.m3();
 		
 		/**
 		 * Instantiated objects come long with reference addresses...
