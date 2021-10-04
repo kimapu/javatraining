@@ -1,7 +1,10 @@
 package my.apiit.training.main;
 
+import java.util.Scanner;
+
 import my.apiit.training.impl.Calculator;
 import my.apiit.training.impl.Employee;
+import my.apiit.training.impl.InvestmentComputer;
 import my.apiit.training.impl.MyCalculator;
 
 public class App extends Object {
@@ -15,6 +18,34 @@ public class App extends Object {
 		//tstMyCalculator();
 		//tstCalculator();
 		//tstEmployee();
+		
+		tstInvestment();
+		
+	}
+	
+	static void tstInvestment()
+	{
+		Scanner scan = new Scanner( System.in );  //capture-user-input
+		InvestmentComputer invester = new InvestmentComputer();
+		String cont = "";
+		//do-while
+		do {
+			//prompt-user-for-investment-details
+			System.out.println( "Enter investment amount: " );
+			double amount = scan.nextDouble(); //capture String input token, convert to double primitive
+			System.out.println( "Enter Annual Interest Rate: " );
+			double rate = scan.nextDouble();
+			System.out.println( "Enter number of years: " );
+			int year = scan.nextInt(); //capture String input token, convert to int primitive
+			
+			double futureInvestmentValue = invester.compute(amount, rate, year);
+			System.out.println( "Your future investment value: "+  futureInvestmentValue);
+			
+			//prompt-user
+			System.out.println( "\nDo you want to continue [yes or y] ? " );
+			cont = scan.next(); //capture String input token
+		}while( cont.equalsIgnoreCase("yes") || cont.equalsIgnoreCase("y") );
+		System.out.println( "\n>>> Program quit!" );
 	}
 	
 	static void tstEmployee() {
