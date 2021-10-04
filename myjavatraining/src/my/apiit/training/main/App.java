@@ -6,6 +6,7 @@ import my.apiit.training.impl.Calculator;
 import my.apiit.training.impl.Employee;
 import my.apiit.training.impl.InvestmentComputer;
 import my.apiit.training.impl.MyCalculator;
+import my.apiit.training.impl.Text;
 
 public class App extends Object {
 	
@@ -19,8 +20,54 @@ public class App extends Object {
 		//tstCalculator();
 		//tstEmployee();
 		
-		tstInvestment();
+		//tstInvestment();
 		
+		//tstTextOccurance();
+		
+		//tstTextReplacement();
+		
+		tstTextPassword();
+		
+	}
+	
+	static void tstTextPassword() {
+		
+		Scanner scan = new Scanner( System.in );  //capture-user-input
+		
+		System.out.println( "Enter your password: " );
+		String password = scan.next();
+		if( Text.checkPassword( password ) != null ) {
+			System.out.println( ">>> Valid password!" );
+		}else {
+			System.out.println( ">>> invalid password!" );
+		}
+		
+	}
+	
+	static void tstTextReplacement() {
+		
+		Scanner scan = new Scanner( System.in );  //capture-user-input
+		
+		System.out.println( "Enter a string: " );
+		String line = scan.nextLine();
+		System.out.println( "Modified string: "+ Text.parseLine(line) );
+		
+	}
+	
+	static void tstTextOccurance() {
+		
+		Scanner scan = new Scanner( System.in );  //capture-user-input
+		
+		System.out.println( "Enter a word: " );
+		String word = scan.next();
+		System.out.println( "Enter the letter you want to count:" );
+		char ch = scan.next().charAt(0);
+		int occurrance = Text.countLetter(word, ch);
+		System.out.println( String.join(" ", 
+				word, 
+				"contains", 
+				Integer.toString(occurrance).concat(Character.toString(ch)) 
+				) );
 	}
 	
 	static void tstInvestment()
