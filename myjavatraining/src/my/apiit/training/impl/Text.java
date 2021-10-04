@@ -23,41 +23,6 @@ public class Text {
 				? pwd
 				: null;
 	}
-	// - checkLength( String ) : boolean
-	private static boolean checkLength( String pwd, int min ) {
-		return pwd.length() >= min;
-	}
-	
-	// - checkLetterOrDigit( String ) : boolean
-	private static boolean checkLetterOrDigit( String pwd ) {
-		return pwd.matches(".*[A-Za-z].*") && pwd.matches(".*[0-9].*");
-	}
-	
-	// - oneLetter( String ) : boolean
-	private static boolean oneLetter( String pwd ) {
-		int numberOfLetters = 0;
-		for (int i = 0; i < pwd.length(); i++) {
-			if (Character.isLetter(pwd.charAt(i))) {
-				numberOfLetters++;
-			}
-			if (numberOfLetters >= 1) {
-				return true;
-			}
-		}
-		return false;
-	}
-	
-	// - oneDigit( String ) : boolean
-	private static boolean oneDigit( String pwd ) {
-		int numberOfDigits = 0;
-		for (int i = 0; i < pwd.length(); i++) {
-			if (Character.isDigit(pwd.charAt(i))) {
-				numberOfDigits++;
-			}
-		}
-		return numberOfDigits >= 1 ;
-	}
-	
 	
 	/**
 	 * Write a program that prompts the user to enter a string and then displays the string modified as follows:
@@ -115,6 +80,41 @@ public class Text {
 	private static String replaceWith( String line, String chars, String replacement) {
 		//replaceAll(String regex, String replacement)
 		return line.replaceAll(chars, replacement);
+	}
+	
+	// - checkLength( String ) : boolean
+	private static boolean checkLength( String pwd, int min ) {
+		return pwd.length() >= min;
+	}
+	
+	// - checkLetterOrDigit( String ) : boolean
+	private static boolean checkLetterOrDigit( String pwd ) {
+		return pwd.matches(".*[A-Za-z].*") && pwd.matches(".*[0-9].*");
+	}
+	
+	// - oneLetter( String ) : boolean
+	private static boolean oneLetter( String pwd ) {
+		int numberOfLetters = 0;
+		for (int i = 0; i < pwd.length(); i++) {
+			if (Character.isLetter(pwd.charAt(i))) {
+				numberOfLetters++;
+			}
+			if (numberOfLetters >= 1) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	// - oneDigit( String ) : boolean
+	private static boolean oneDigit( String pwd ) {
+		int numberOfDigits = 0;
+		for (int i = 0; i < pwd.length(); i++) {
+			if (Character.isDigit(pwd.charAt(i))) {
+				numberOfDigits++;
+			}
+		}
+		return numberOfDigits >= 1 ;
 	}
 	
 }
