@@ -36,6 +36,8 @@ public class App extends Object {
 		
 		System.out.println( "Enter your password: " );
 		String password = scan.next();
+		//String password = "abc"; //test-data
+		
 		if( Text.checkPassword( password ) != null ) {
 			System.out.println( ">>> Valid password!" );
 		}else {

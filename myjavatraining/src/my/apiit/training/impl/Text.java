@@ -19,6 +19,16 @@ public class Text {
 						checkLetterOrDigit( pwd ) && 
 						oneLetter( pwd ) && 
 						oneDigit( pwd );
+		
+		/**
+		 * && vs & 
+		 */
+		
+//		boolean flag = checkLength( pwd, 7 ) & 
+//				checkLetterOrDigit( pwd ) & 
+//				oneLetter( pwd ) & 
+//				oneDigit( pwd );
+		
 		return ( flag )
 				? pwd
 				: null;
@@ -84,16 +94,19 @@ public class Text {
 	
 	// - checkLength( String ) : boolean
 	private static boolean checkLength( String pwd, int min ) {
+		System.out.println( "checkLength() - running..." );
 		return pwd.length() >= min;
 	}
 	
 	// - checkLetterOrDigit( String ) : boolean
 	private static boolean checkLetterOrDigit( String pwd ) {
+		System.out.println( "checkLetterOrDigit() - running..." );
 		return pwd.matches(".*[A-Za-z].*") && pwd.matches(".*[0-9].*");
 	}
 	
 	// - oneLetter( String ) : boolean
 	private static boolean oneLetter( String pwd ) {
+		System.out.println( "oneLetter() - running..." );
 		int numberOfLetters = 0;
 		for (int i = 0; i < pwd.length(); i++) {
 			if (Character.isLetter(pwd.charAt(i))) {
@@ -108,9 +121,12 @@ public class Text {
 	
 	// - oneDigit( String ) : boolean
 	private static boolean oneDigit( String pwd ) {
+		System.out.println( "oneDigit() - running..." );
 		int numberOfDigits = 0;
 		for (int i = 0; i < pwd.length(); i++) {
 			if (Character.isDigit(pwd.charAt(i))) {
+//			int acsiiValue = (int)pwd.charAt(i);
+//			if ( acsiiValue >= 48 && acsiiValue <= 57 )
 				numberOfDigits++;
 			}
 		}
