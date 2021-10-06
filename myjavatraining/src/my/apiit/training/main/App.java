@@ -2,10 +2,12 @@ package my.apiit.training.main;
 
 import java.util.Scanner;
 
+import my.apiit.training.impl.ArrayCopier;
 import my.apiit.training.impl.Calculator;
 import my.apiit.training.impl.Employee;
 import my.apiit.training.impl.InvestmentComputer;
 import my.apiit.training.impl.MyCalculator;
+import my.apiit.training.impl.Statistic;
 import my.apiit.training.impl.Text;
 
 public class App extends Object {
@@ -26,7 +28,49 @@ public class App extends Object {
 		
 		//tstTextReplacement();
 		
-		tstTextPassword();
+		//tstTextPassword();
+		
+		//tstStatistic();
+		
+		tstArrayCopier();
+		
+	}
+	
+	static void tstArrayCopier() {
+		
+		String[] arr1 = {
+				"Affogato", "Americano", "Cappuccino", "Corretto", "Cortado", "Doppio",
+				"Espresso", "Frappucino", "Freddo", "Lungo", "Macchiato", "Marocchino",
+				"Ristretto"
+		}; 
+		
+		String[] arr2 = new String[arr1.length]; //empty-array
+		arr2 = ArrayCopier.to( arr1, arr2 );
+		
+		//show-array-elems
+		for (String elem : arr2) {
+			System.out.print( elem + " " );
+		}
+		
+	}
+	
+	static void tstStatistic() {
+		int my_array[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		
+		double sum = Statistic.sum(my_array);
+		System.out.println( "Sum: "+ sum );
+		
+	}
+	
+	static void tstDivision() {
+		double d1 = 9/3;
+		double d2 = 10/3; //divison val
+		double d3 = 10%3; //remainder val
+		System.out.println( (double)9/3 );
+		System.out.println( 10/3 );
+		System.out.println( d1 );
+		System.out.println( d2 );
+		System.out.println( d3 );
 		
 	}
 	
