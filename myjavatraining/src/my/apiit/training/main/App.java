@@ -7,6 +7,7 @@ import my.apiit.training.impl.Calculator;
 import my.apiit.training.impl.Employee;
 import my.apiit.training.impl.InvestmentComputer;
 import my.apiit.training.impl.MyCalculator;
+import my.apiit.training.impl.Sorter;
 import my.apiit.training.impl.Statistic;
 import my.apiit.training.impl.Text;
 
@@ -32,7 +33,23 @@ public class App extends Object {
 		
 		//tstStatistic();
 		
-		tstArrayCopier();
+		//tstArrayCopier();
+		
+		tstSorter();
+		
+	}
+	
+	static void tstSorter() {
+		String[] arr = {
+				"Java", "Python", "PHP", "C#", "C Programming", "C++"
+		};
+		
+		String[] sorted_arr = Sorter.run(arr);
+		
+		//show-sorted-arr
+		for (String elem : sorted_arr) {
+			System.out.print( elem + ", " );
+		}
 		
 	}
 	
