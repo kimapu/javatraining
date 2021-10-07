@@ -1,4 +1,4 @@
-package my.apiit.training.nestedclass;
+package my.apiit.training.javaclass.nested;
 
 public class Demo {
 
@@ -25,19 +25,21 @@ public class Demo {
 
 class OuterClass{
 	//data-member (instance variables)
-	int i;
+	int i = 10;
 	String s;
 	double d;
 	/**
 	 * Inner class (instance member)
 	 */
 	class InnerClass{
-		
+		int i = 20;
 		/**
 		 * Instance method showInner() - InnerClass
 		 */
 		void showInner() {
 			System.out.println( "InnerClass - showInner()..." );
+			System.out.println( "printout - i of InnerClass: "+ this.i );
+			System.out.println( "printout - i of OuterClass: "+ OuterClass.this.i );
 		}
 		
 	}
