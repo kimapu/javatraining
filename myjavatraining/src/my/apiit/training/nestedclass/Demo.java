@@ -11,7 +11,13 @@ public class Demo {
 		OuterClass.InnerClass inner = outer.new InnerClass(); //InnerClass object instance
 		inner.showInner();
 		
-		outer.m();
+		outer.m(); //Internally, calling object of LocalClass's method.
+		
+		/**
+		 * Need not instantiation of OuterClass for static nested class
+		 */
+		OuterClass.StaticNestedClass staticClass = new OuterClass.StaticNestedClass();
+		staticClass.showStaticNested();
 		
 	}
 	
@@ -38,8 +44,17 @@ class OuterClass{
 	
 	/**
 	 * Static nested/inner class
+	 * 	
+	 * 	with static keyword, the member (static nested class) belongs to the class OuterClass
+	 * 
 	 */
-	static class StaticNestedClass{}
+	static class StaticNestedClass{
+		
+		void showStaticNested() {
+			System.out.println( "StaticNestedlass - showStaticNested()..." );
+		}
+		
+	}
 	
 	/**
 	 * Instance method m() - OuterClass
