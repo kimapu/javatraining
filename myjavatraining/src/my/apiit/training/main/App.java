@@ -64,7 +64,7 @@ public class App extends Object {
 		sa.addToBalance(interest);
 		System.out.println( sa );
 		
-		
+
 		//Current curr = new Current();
 		
 	}
