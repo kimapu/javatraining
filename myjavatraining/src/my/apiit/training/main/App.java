@@ -41,11 +41,34 @@ public class App extends Object {
 		
 		//tstSorter();
 		
-		tstAccount_1();
+		//tstSavingAccount();
+		
+		tstCurrentAccount();
+		
 		
 	}
 	
-	static void tstAccount_1() {
+	static void tstCurrentAccount() {
+		
+		Current curr = new Current();
+		curr.number = 987654321;
+		curr.balance = 2000;
+		curr.dateCreated = LocalDate.now();
+		System.out.println( curr );
+		
+		System.out.println( "\n>>> Performing transaction [6 deposit]" );
+		curr.deposit(10);
+		curr.deposit(10);
+		curr.deposit(10);
+		curr.deposit(10);
+		curr.deposit(10);
+		curr.deposit(10);
+		System.out.println( curr );
+		
+		
+	}
+	
+	static void tstSavingAccount() {
 		
 		/**
 		 * 1 object for savings; 1 object current
