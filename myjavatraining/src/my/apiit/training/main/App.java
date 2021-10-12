@@ -43,9 +43,44 @@ public class App extends Object {
 		
 		//tstSavingAccount();
 		
-		tstCurrentAccount();
+		//tstCurrentAccount();
 		
+		//tstTwoAccountEqual();
 		
+		tstAccountPolymorphic();
+		
+	}
+	
+	static void tstAccountPolymorphic() {
+		
+		//acc is a polymorphic object-reference
+		Account acc;  //compile-time
+				
+		acc = new Savings(); //run-time
+		if( Savings.class.isInstance(acc) ) {
+			//explicit-casting
+			Savings svg = (Savings)acc; //down-casting
+			svg.number = 123456789;
+			svg.balance = 1000;
+			svg.dateCreated = LocalDate.now();
+			svg.interestRate = 0.05;
+		}
+		
+		acc = new Current(); //run-time
+		acc.deposit(10);
+		acc.withdraw(10);
+		
+	}
+	
+	static void tstTwoAccountEqual() {
+		Savings svg = new Savings();
+		svg.number = 654321;
+		
+		Current curr = new Current();
+		curr.number = 123456;
+		
+		System.out.println(">>> Account check...");
+		System.out.println( svg.equals(curr) );
 	}
 	
 	static void tstCurrentAccount() {

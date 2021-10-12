@@ -14,22 +14,21 @@ public class Current extends Account{
 	 * - handleTranx() : void
 	 */
 	private void handleTranx() {
-		tranx++;
-		if( tranx > freeTranx )
-		{
-			super.withdraw(tranxFee);
-		}		
+		if( ++tranx > freeTranx )
+			super.withdraw(tranxFee);	
 	}
 	
 	/**
 	 * overriding methods: deposit and withdraw
 	 */
 	public void deposit( double amount ) {
+		System.out.println( "Current - deposit tranx..." );
 		handleTranx();
 		this.balance += amount;
 	}
 	
 	public void withdraw( double amount ) {
+		System.out.println( "Current - withdraw tranx..." );
 		handleTranx();
 		this.balance -= amount;
 	}

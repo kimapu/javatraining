@@ -38,4 +38,10 @@ public class Account {
 		return objText.toString();
 	}
 	
+	@Override
+	public boolean equals(Object next) {
+		Account next_acc = (Account)next;
+		return next_acc.number == this.number;
+	}
+	
 }
