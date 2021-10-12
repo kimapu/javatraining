@@ -1,5 +1,6 @@
 package my.apiit.training.main;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 import my.apiit.training.impl.ArrayCopier;
@@ -7,6 +8,9 @@ import my.apiit.training.impl.Calculator;
 import my.apiit.training.impl.Employee;
 import my.apiit.training.impl.InvestmentComputer;
 import my.apiit.training.impl.MyCalculator;
+import my.apiit.training.impl.Savings;
+import my.apiit.training.impl.Current;
+import my.apiit.training.impl.Account;
 import my.apiit.training.impl.Sorter;
 import my.apiit.training.impl.Statistic;
 import my.apiit.training.impl.Text;
@@ -35,7 +39,33 @@ public class App extends Object {
 		
 		//tstArrayCopier();
 		
-		tstSorter();
+		//tstSorter();
+		
+		tstAccount_1();
+		
+	}
+	
+	static void tstAccount_1() {
+		
+		/**
+		 * 1 object for savings; 1 object current
+		 */
+		Savings sa = new Savings();
+		sa.number = 123456789;
+		sa.balance = 1000;
+		sa.dateCreated = LocalDate.now();
+		sa.interestRate = 0.05;
+		
+		System.out.println( sa );
+		System.out.println();
+		double interest = sa.calcInterest();
+		System.out.println( "Interest: " + interest );
+		
+		sa.addToBalance(interest);
+		System.out.println( sa );
+		
+		
+		//Current curr = new Current();
 		
 	}
 	
