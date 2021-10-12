@@ -67,7 +67,8 @@ public class App extends Object {
 		}
 		
 		acc = new Current(); //run-time
-		acc.deposit(10);
+		//overriding the default implementation-detail of the Account
+		acc.deposit(10); 
 		acc.withdraw(10);
 		
 	}
