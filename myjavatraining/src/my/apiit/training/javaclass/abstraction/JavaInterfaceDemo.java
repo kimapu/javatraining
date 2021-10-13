@@ -13,18 +13,37 @@ public class JavaInterfaceDemo {
 		s1.edit();
 		//s1.getName(); //not possible bcos it isn't the viewable operation in the interface
 		
+		Comparable s2 = new Student();
+		s2.compareTo(s2);
+		
+		Cloneable s3 = new Student();
+		try {
+			Object cloned_obj = ((Student)s3).clone();
+		} catch (CloneNotSupportedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 	
 	
 }
 
-class Person{
+class Person extends Object{
 	
 	String name;
 	
 }
 
-class Student extends Person implements Updatable{
+/**
+ * Student is-a Object
+ * Student is-a Person; 
+ * Student is-a Updatable object
+ * Student is-a Comparable object
+ * Student is-a Cloneable object
+ */
+
+class Student extends Person implements Updatable, Comparable, Cloneable{
 
 	@Override
 	public void edit() {
@@ -38,9 +57,27 @@ class Student extends Person implements Updatable{
 	public String getName() {
 		return super.name;
 	}
+
+	@Override
+	public int compareTo(Object o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		// TODO Auto-generated method stub
+		return super.clone();
+	}
+	
+	
 	
 }
-
+/**
+ * 
+ * StudentRecord is-a Appendable object
+ *
+ */
 class StudentRecord implements Appendable{
 	
 	@Override
@@ -50,7 +87,11 @@ class StudentRecord implements Appendable{
 	public void edit() {}
 	
 }
-
+/**
+ * 
+ * Appendable is-a subtype of Updatable
+ *
+ */
 interface Appendable extends Updatable{
 	void append();
 }
