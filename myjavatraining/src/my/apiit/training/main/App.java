@@ -1,17 +1,22 @@
 package my.apiit.training.main;
 
+import java.awt.Rectangle;
 import java.time.LocalDate;
 import java.util.Scanner;
 
+import my.apiit.training.impl.Account;
 import my.apiit.training.impl.ArrayCopier;
 import my.apiit.training.impl.Calculator;
+import my.apiit.training.impl.Circle;
+import my.apiit.training.impl.Current;
 import my.apiit.training.impl.Employee;
 import my.apiit.training.impl.InvestmentComputer;
 import my.apiit.training.impl.MyCalculator;
 import my.apiit.training.impl.Savings;
-import my.apiit.training.impl.Current;
-import my.apiit.training.impl.Account;
+import my.apiit.training.impl.Shape;
 import my.apiit.training.impl.Sorter;
+import my.apiit.training.impl.Square;
+import my.apiit.training.impl.MyRectangle;
 import my.apiit.training.impl.Statistic;
 import my.apiit.training.impl.Text;
 
@@ -47,7 +52,27 @@ public class App extends Object {
 		
 		//tstTwoAccountEqual();
 		
-		tstAccountPolymorphic();
+		//tstAccountPolymorphic();
+		
+		tstAbstractionExercise();
+		
+	}
+	
+	static void tstAbstractionExercise() {
+		
+		Shape s = new Circle( 7 );
+		s.ofArea();
+		s.print();
+		System.out.println();
+		
+		s = new Square( 12 );
+		s.ofArea();
+		s.print();
+		
+		System.out.println();
+		s = new MyRectangle( 12, 10 );
+		s.ofArea();
+		s.print();
 		
 	}
 	
