@@ -1,6 +1,5 @@
 package my.apiit.training.main;
 
-import java.awt.Rectangle;
 import java.time.LocalDate;
 import java.util.Scanner;
 
@@ -12,11 +11,12 @@ import my.apiit.training.impl.Current;
 import my.apiit.training.impl.Employee;
 import my.apiit.training.impl.InvestmentComputer;
 import my.apiit.training.impl.MyCalculator;
+import my.apiit.training.impl.MyRectangle;
 import my.apiit.training.impl.Savings;
+import my.apiit.training.impl.Score;
 import my.apiit.training.impl.Shape;
 import my.apiit.training.impl.Sorter;
 import my.apiit.training.impl.Square;
-import my.apiit.training.impl.MyRectangle;
 import my.apiit.training.impl.Statistic;
 import my.apiit.training.impl.Text;
 
@@ -54,7 +54,18 @@ public class App extends Object {
 		
 		//tstAccountPolymorphic();
 		
-		tstAbstractionExercise();
+		//tstAbstractionExercise();
+		
+		tstScore();
+		
+	}
+	
+	static void tstScore() {
+		
+		Score myscore = new Score( Score.DB_FILE );
+		double sum = myscore.sum();
+		
+		System.out.println( "Sum: "+ sum );
 		
 	}
 	

@@ -10,15 +10,15 @@ import java.util.StringTokenizer;
 
 public class Score {
 
-	public final String DB_FILE = "src/my/apiit/training/impl/scores.txt"; 
+	public static final String DB_FILE = "src/my/apiit/training/impl/scores.txt"; 
 	
 	private String targetFile;
 	public Score( String f ) {
 		targetFile = f;
 	}
 
-	public long sum() throws NumberFormatException{
-		long sum = 0;
+	public double sum() throws NumberFormatException{
+		double sum = 0;
 		List<String> scores = getAll( targetFile );
 		if ( scores != null && scores.size() > 0 ) {
 			for (String scoreLine : scores) {
