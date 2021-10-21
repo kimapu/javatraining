@@ -13,6 +13,7 @@ import my.apiit.training.impl.Circle;
 import my.apiit.training.impl.Current;
 import my.apiit.training.impl.Employee;
 import my.apiit.training.impl.ExceptionLineTooLong;
+import my.apiit.training.impl.Filter;
 import my.apiit.training.impl.InvestmentComputer;
 import my.apiit.training.impl.MyCalculator;
 import my.apiit.training.impl.MyRectangle;
@@ -62,8 +63,14 @@ public class App extends Object {
 		
 		//tstScore();
 		
-		tstExceptionLineTooLong();
+		//tstExceptionLineTooLong();
 		
+		tstFilter();
+		
+	}
+	
+	static void tstFilter() {
+		Filter.printInteger( Filter.PATH );
 	}
 	
 	static void tstExceptionLineTooLong() {
