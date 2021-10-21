@@ -1,5 +1,8 @@
 package my.apiit.training.main;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.Scanner;
 
@@ -9,6 +12,7 @@ import my.apiit.training.impl.Calculator;
 import my.apiit.training.impl.Circle;
 import my.apiit.training.impl.Current;
 import my.apiit.training.impl.Employee;
+import my.apiit.training.impl.ExceptionLineTooLong;
 import my.apiit.training.impl.InvestmentComputer;
 import my.apiit.training.impl.MyCalculator;
 import my.apiit.training.impl.MyRectangle;
@@ -56,8 +60,32 @@ public class App extends Object {
 		
 		//tstAbstractionExercise();
 		
-		tstScore();
+		//tstScore();
 		
+		tstExceptionLineTooLong();
+		
+	}
+	
+	static void tstExceptionLineTooLong() {
+		/**
+		 * Exception handler - trycatch
+		 */
+		String path = "src/my/apiit/training/impl/strings.txt";
+		try {
+			BufferedReader br = new BufferedReader( new FileReader( path ) );
+			String line =  "";
+			while( (line = br.readLine()) != null ) {
+				if( line.length() > 80 ) {
+					throw new ExceptionLineTooLong( ">>> TooLong: >80 chars" );
+				}
+				else {
+					System.out.println( line );
+				}
+			}
+			
+		} catch (IOException | ExceptionLineTooLong e) {
+			System.out.println( e.getMessage() );
+		} 
 	}
 	
 	static void tstScore() {
