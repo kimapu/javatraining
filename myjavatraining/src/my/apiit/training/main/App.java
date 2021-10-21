@@ -65,7 +65,7 @@ public class App extends Object {
 		
 		//tstExceptionLineTooLong();
 		
-		tstFilter();
+		//tstFilter();
 		
 	}
 	
