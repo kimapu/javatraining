@@ -33,6 +33,25 @@ public class Score {
 		return sum;
 	}
 	
+	public double avg() {
+		double sum = 0, avg = 0;
+		List<String> scores = getAll( targetFile );
+		if ( scores != null && scores.size() > 0 ) {
+			int count = 0;
+			for (String scoreLine : scores) {
+				StringTokenizer tk = new StringTokenizer( scoreLine );
+				while ( tk.hasMoreTokens() ) {
+					count++;
+					sum += Double.parseDouble( tk.nextToken() );
+				}
+			}
+			avg = sum / count;
+		} else {
+			System.out.println( "No scores!" );
+		}
+		return avg;
+	}
+	
 	private List<String> getAll( String fileName ) {
 		List<String> content = null;
 		if( new File(fileName).exists() ) {

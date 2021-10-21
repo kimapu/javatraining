@@ -64,8 +64,10 @@ public class App extends Object {
 		
 		Score myscore = new Score( Score.DB_FILE );
 		double sum = myscore.sum();
+		double avg = myscore.avg();
 		
 		System.out.println( "Sum: "+ sum );
+		System.out.println( "Average: "+ avg );
 		
 	}
 	
