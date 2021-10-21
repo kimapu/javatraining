@@ -1,3 +1,3 @@
+Constructs a new exception with null as its detail message. The cause is not initialized, and may subsequently be initialized by a call to Throwable.initCause(java.lang.Throwable). Constructs a new exception with null as its detail message. The cause is not initialized, and may subsequently be initialized by a call to Throwable.initCause(java.lang.Throwable).
 The cause is not initialized.
 Constructs a new exception with null as its detail message.
-Constructs a new exception with null as its detail message. The cause is not initialized, and may subsequently be initialized by a call to Throwable.initCause(java.lang.Throwable). Constructs a new exception with null as its detail message. The cause is not initialized, and may subsequently be initialized by a call to Throwable.initCause(java.lang.Throwable).

@@ -73,17 +73,23 @@ public class App extends Object {
 		String path = "src/my/apiit/training/impl/strings.txt";
 		try {
 			BufferedReader br = new BufferedReader( new FileReader( path ) );
-			String line =  "";
-			while( (line = br.readLine()) != null ) {
-				if( line.length() > 80 ) {
-					throw new ExceptionLineTooLong( ">>> TooLong: >80 chars" );
+			String line =  br.readLine();
+			while( line != null ) 
+			{	
+				try {
+					if( line.length() > 80 ) {
+						throw new ExceptionLineTooLong( ">>> TooLong: >80 chars" );
+					}
+					else {
+						System.out.println( line );
+					}
+				} catch (ExceptionLineTooLong e) {
+					System.out.println( e.getMessage() );
 				}
-				else {
-					System.out.println( line );
-				}
+				line = br.readLine();
 			}
-			
-		} catch (IOException | ExceptionLineTooLong e) {
+	
+		} catch (IOException e) {
 			System.out.println( e.getMessage() );
 		} 
 	}
